@@ -9,6 +9,7 @@ class Boggle():
     def __init__(self):
 
         self.words = self.read_dict("words.txt")
+        # words = list of words from .txt file
 
     def read_dict(self, dict_path):
         """Read and return all words in dictionary."""
@@ -34,6 +35,7 @@ class Boggle():
 
         word_exists = word in self.words
         valid_word = self.find(board, word.upper())
+        #searches board for word.upper
 
         if word_exists and valid_word:
             result = "ok"

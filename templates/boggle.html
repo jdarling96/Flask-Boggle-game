@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h2>Boggle!</h2>
+
+<table>
+    {% for x in game %}
+    <tr>
+        {% for y in x %}
+        <td>{{y}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<form id="boggle-form" action="">
+    <h2>See A Word?</h2>
+    <label for="guess">Guess</label>
+    <input id="guess" type="text" name="guess" placeholder="word">
+    <button id="btn" type="submit">Submit!</button>
+</form>
+<p id ="timer-display"></p>
+
+<div id="res-display">
+
+</div>
+
+
+
+
+
+
+{% endblock %}
