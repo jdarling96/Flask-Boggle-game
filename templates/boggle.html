@@ -4,6 +4,7 @@
 <h2>Boggle!</h2>
 
 <table>
+    <tbody> 
     {% for x in game %}
     <tr>
         {% for y in x %}
@@ -11,7 +12,12 @@
         {% endfor %}
     </tr>
     {% endfor %}
+    </tbody> 
 </table>
+<p>High Score:
+    <b>{{highscore}}</b>
+    in {{nplays}} plays
+</p>
 
 <form id="boggle-form" action="">
     <h2>See A Word?</h2>
@@ -19,11 +25,15 @@
     <input id="guess" type="text" name="guess" placeholder="word">
     <button id="btn" type="submit">Submit!</button>
 </form>
-<p id ="timer-display"></p>
+<label for="timer">Seconds Left:<p name="timer" id ="timer-display"></p></label>
+
 
 <div id="res-display">
 
 </div>
+<ul id="used-words">
+    
+</ul>
 
 
 
